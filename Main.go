@@ -12,6 +12,8 @@ func main() {
 	var defaults conf
 	defaults.getDefaults()
 
+	callRestEndpoint()
+
 	app.Get("/", func(c *fiber.Ctx) error {
 		return c.SendString("Hello, Banana 👋!")
 	})
